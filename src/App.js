@@ -33,7 +33,22 @@ function App() {
 }
 
 function Home() {
-  return <h2>Home</h2>;
+  return(
+    <div>
+      <h2>Routes</h2>
+      <ul>
+      <li>dinosaur: /dinosaur</li>
+      <li>scrat: /scrat</li>
+      <li>sketch: /sketch</li>
+      <li>p5: /p5</li>
+      <li>editor: /editor</li>
+      <li>snake: /snake</li>
+      <li>bricks breaker: /bricksbreaker</li>
+      <li>memory game: /memory</li>
+      <li>whack a mole: /mole</li>
+      </ul>
+    </div>
+  );
 }
 
 function PageNotFound(){
