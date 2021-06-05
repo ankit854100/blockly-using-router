@@ -1,0 +1,19 @@
+.App{
+  height: 100%;
+  padding: 1rem;
+}
+
+.editor_title{
+  margin: 0;
+  padding: 0;
+  padding-bottom: 1rem;
+}
+
+#blocklyDiv {
+    width: 100%;
+    height: 85%;
+}
+
+.editor_button{
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,78 @@
+.top-wrapper {
+    background-color: #e5f0ff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+  
+  .instruction-container {
+    text-align: center;
+  }
+  
+  .blocklyWrapper {
+    /* background-color: grey; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .blocklyContainer {
+    /* background-color: #ffd0d0; */
+    width: 40%;
+    height: 100%;
+  }
+  
+  .blocklyInnerWrapper {
+    padding-right: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .buttonContainer {
+    padding: 5px 0 5px;
+    text-align: right;
+  }
+  
+  .custombutton {
+    margin-left: 5px;
+  }
+  
+  #blocklyDiv {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .blocklySvg {
+    background-color: #f9f9f9 !important;
+    border-radius: 0.3225em;
+    border: 0.0625em solid #c3ccd9;
+  }
+  
+  .blocklyFlyoutBackground {
+    fill: #f9f9f9 !important;
+    stroke: #c3ccd9 !important;
+    stroke-width: 0.0625em;
+  }
+  
+  .blocklyMainBackground {
+    stroke-width: 0 !important;
+  }
+  
+  .rectangle {
+    background-color: #fff;
+    border-radius: 0.3225em;
+    border: 0.061em solid #c3ccd9;
+    margin-top: 2.375em;
+    margin-right: 0.3125em;
+    width: 60%;
+    height: 92%;
+    text-align: center !important;
+  }
+  
+  #canvas {
+    margin-top: 2.375em;
+  }
+  

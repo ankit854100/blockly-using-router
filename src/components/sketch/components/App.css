@@ -1,0 +1,46 @@
+.sketch_top{
+    text-align: center;
+    height: 100%;
+    background-color: #f2f2f2;
+}
+
+h4{
+    padding: 1rem;
+}
+
+.sketch_button {
+    margin-right: 10px;
+  }
+  
+  .sketch_wrapper {
+    margin-top: 7.5px;
+    padding: 0 20px;
+  }
+  
+  .sketch_rectangle {
+    background-color: #fff;
+    height: 500px;
+    width: 450px;
+    border: 1px solid #C3CCD9;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+  }
+  
+  #canvas {
+    border: 1px solid #fff;
+    margin: 30px auto;
+  }
+  
+  #blocklyDiv {
+    display: inline-block;
+    /* border: 1px solid #000; */
+    height: 500px;
+    width: 800px;
+  }
+  
+  .buttonContainer {
+    display: inline-block;
+    float: left;
+  }
