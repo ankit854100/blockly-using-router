@@ -63,7 +63,7 @@ function PageNotFound(){
         }
 
         .page404{
-          width: 800px;
+          width: 600px;
         }
       `}</style>
     </div>

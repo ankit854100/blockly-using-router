@@ -16,7 +16,7 @@ let blockTypes = [
 export default function Workspace(props) {
   useEffect(() => {
     if (props.status === "start") {
-      workSpace = Blockly.inject("blocklyDiv", {
+      workSpace = Blockly.inject("blocklySketchDiv", {
         toolbox: document.getElementById("toolbox"),
         scrollbars: false
       });
@@ -81,30 +81,32 @@ export default function Workspace(props) {
 
   return (
     <React.Fragment>
-      <div id="blocklyDiv"></div>
-      <xml
-        xmlns="https://developers.google.com/blockly/xml"
-        id="toolbox"
-        style={{ display: "none" }}
-      >
-        <Blocks blocks={blockTypes} />
-      </xml>
-      <xml
-        xmlns="https://developers.google.com/blockly/xml"
-        id="startingBlock"
-        style={{ display: "none" }}
-      >
-        <block type="when_run" movable="false" deletable="false" />
-      </xml>
-      <div className="buttonContainer">
-        <Button variant="outline-primary" className="sketch_button" onClick={handleClick}>
-          {" "}
-          run code{" "}
-        </Button>
-        <Button variant="outline-danger" className="sketch_button" onClick={handleRestart}>
-          {" "}
-          restart{" "}
-        </Button>
+      <div className="sketch-workspace-wrapper">
+        <div id="blocklySketchDiv"></div>
+        <xml
+          xmlns="https://developers.google.com/blockly/xml"
+          id="toolbox"
+          style={{ display: "none" }}
+        >
+          <Blocks blocks={blockTypes} />
+        </xml>
+        <xml
+          xmlns="https://developers.google.com/blockly/xml"
+          id="startingBlock"
+          style={{ display: "none" }}
+        >
+          <block type="when_run" movable="false" deletable="false" />
+        </xml>
+        <div className="buttonContainer">
+          <Button variant="outline-primary" className="sketch_button" onClick={handleClick}>
+            {" "}
+            run code{" "}
+          </Button>
+          <Button variant="outline-danger" className="sketch_button" onClick={handleRestart}>
+            {" "}
+            restart{" "}
+          </Button>
+        </div>
       </div>
     </React.Fragment>
   );

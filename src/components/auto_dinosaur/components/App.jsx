@@ -104,14 +104,14 @@ export default function App() {
     }
   }
   return (
-    <div className="top-wrapper">
-      <div className="instruction-container"></div>
-      <div className="blocklyWrapper">
-        <div className="blocklyContainer">
+    <div className="dino-top-wrapper">
+      <div className="dino-instruction-container"></div>
+      <div className="dino-blocklyWrapper">
+        <div className="dino-blocklyContainer">
           <Workspace fun={handleClick} />
         </div>
-        <div className="rectangle">
-          <canvas ref={ref} id="canvas" />
+        <div className="dino-rectangle">
+          <canvas ref={ref} id="dino-canvas" />
         </div>
       </div>
     </div>

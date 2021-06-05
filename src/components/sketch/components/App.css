@@ -32,8 +32,12 @@ h4{
     border: 1px solid #fff;
     margin: 30px auto;
   }
+
+  .sketch-workspace-wrapper{
+    height: 100%;
+  }
   
-  #blocklyDiv {
+  #blocklySketchDiv {
     display: inline-block;
     /* border: 1px solid #000; */
     height: 500px;

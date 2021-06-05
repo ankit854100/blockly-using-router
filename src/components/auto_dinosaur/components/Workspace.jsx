@@ -8,7 +8,7 @@ let workspace = new Blockly.Workspace();
 
 export default function Workspace(props) {
   useEffect(() => {
-    workspace = Blockly.inject("blocklyDiv", {
+    workspace = Blockly.inject("blocklyDinoDiv", {
       toolbox: document.getElementById("toolbox")
     });
   });
@@ -44,8 +44,8 @@ export default function Workspace(props) {
   return (
     <React.Fragment>
       {/* <div id="blocklyDiv"></div> */}
-      <div className="blocklyInnerWrapper">
-        <div className="buttonContainer">
+      <div className="dino-blocklyInnerWrapper">
+        <div className="dino-buttonContainer">
           <Button
             variant="primary"
             size="sm"
@@ -56,7 +56,7 @@ export default function Workspace(props) {
             run{" "}
           </Button>
         </div>
-        <div id="blocklyDiv"></div>
+        <div id="blocklyDinoDiv"></div>
 
         <xml
           xmlns="https://developers.google.com/blockly/xml"

@@ -1,4 +1,4 @@
-.top-wrapper {
+.dino-top-wrapper {
     background-color: #e5f0ff;
     display: flex;
     flex-direction: column;
@@ -11,36 +11,36 @@
     text-align: center;
   }
   
-  .blocklyWrapper {
+  .dino-blocklyWrapper {
     /* background-color: grey; */
     height: 100%;
     display: flex;
     flex-direction: row;
   }
   
-  .blocklyContainer {
+  .dino-blocklyContainer {
     /* background-color: #ffd0d0; */
     width: 40%;
     height: 100%;
   }
   
-  .blocklyInnerWrapper {
+  .dino-blocklyInnerWrapper {
     padding-right: 5px;
     height: 100%;
     display: flex;
     flex-direction: column;
   }
   
-  .buttonContainer {
+  .dino-buttonContainer {
     padding: 5px 0 5px;
     text-align: right;
   }
   
-  .custombutton {
+  .dino-custombutton {
     margin-left: 5px;
   }
   
-  #blocklyDiv {
+  #blocklyDinoDiv {
     height: 100%;
     width: 100%;
   }
@@ -61,7 +61,7 @@
     stroke-width: 0 !important;
   }
   
-  .rectangle {
+  .dino-rectangle {
     background-color: #fff;
     border-radius: 0.3225em;
     border: 0.061em solid #c3ccd9;
@@ -72,7 +72,7 @@
     text-align: center !important;
   }
   
-  #canvas {
+  #dino-canvas {
     margin-top: 2.375em;
   }
   

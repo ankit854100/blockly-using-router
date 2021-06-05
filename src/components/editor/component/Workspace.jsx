@@ -7,7 +7,7 @@ let workspace = new Blockly.Workspace();
 
 export default function Workspace() {
   useEffect(() => {
-    workspace = Blockly.inject("blocklyDiv", {
+    workspace = Blockly.inject("blocklyEditorDiv", {
       toolbox: document.getElementById("toolbox")
     });
   });
@@ -32,7 +32,7 @@ export default function Workspace() {
   }
   return (
     <React.Fragment>
-      <div id="blocklyDiv"></div>
+      <div id="blocklyEditorDiv"></div>
       <xml
         xmlns="https://developers.google.com/blockly/xml"
         id="toolbox"
@@ -41,8 +41,8 @@ export default function Workspace() {
         <Blocks />
       </xml>
       <br></br>
-      <Button variant="primary" className="editor_button" onClick={run}> run code </Button>
-      <Button variant="dark" className="editor_button" onClick={show}> show code </Button>
+      <Button variant="primary" className="editor-button" onClick={run}> run code </Button>
+      <Button variant="dark" className="editor-button" onClick={show}> show code </Button>
     </React.Fragment>
   );
 }

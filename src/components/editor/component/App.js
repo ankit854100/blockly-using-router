@@ -4,8 +4,8 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <h4 className="editor_title">Say hello to blockly editor</h4>
+    <div className="editor-app">
+      <h4 className="editor-title">Say hello to blockly editor</h4>
       <Workspace />
     </div>
   );
