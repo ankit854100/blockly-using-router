@@ -1,6 +1,7 @@
 import React from 'react'
 import TeamCard from "./TeamCard"
 import NavBar from "./NavBar"
+import {Link} from "react-router-dom"
 
 function Home() {
     return (
@@ -18,20 +19,25 @@ function Home() {
                     <div className="intro-descContainer">
                        <div>
                             <h3 className="descContainer-heading">A new and easy way to learn coding.</h3>
-                            <strong>Getting Started</strong>
+                            <Link to="/activity">
+                                <strong className="heading-gettingStarted">Getting started</strong>
+                            </Link>
                        </div>
                     </div>
                 </div>
                 <div className="home-reason">
-                    <h3 className="reason-title">Why coding for kids</h3>
+                    <div class="site-heading text-center">
+                    <h4 className="reason-title">Why <span style={{color: "#4C97FF"}}>coding</span> for kids</h4>
+                    </div>
+                    
                     <div className="reason-container">
                         <div className="container-points">
                             <ul className="points-container">
                                 <li>Logic building</li>
                                 <li>Programming with worrying about syntax.</li>
                                 <li>Will learn all the procedural programming concepts.</li>
-                                <li>Will learn all the procedural programming concepts.</li>
-                                <li>Will learn all the procedural programming concepts.</li>
+                                <li>Will easily be able to switch in text-based programming.</li>
+                                <li>Will be able to keep-up with the fast groing technology.</li>
                             </ul>
                         </div>
                         <div className="container-imgContainer">
@@ -43,7 +49,9 @@ function Home() {
                     </div>
                 </div>
                 <div className="home-benefits">
-                    <h3 className="reason-title">Benefits of joining us.</h3>
+                <div class="site-heading text-center">
+                    <h4 className="reason-title">Benefits of <span style={{color: "#4C97FF"}}>joining</span> us</h4>
+                    </div>
                     <div className="reason-container">
                         <div className="container-imgContainer">
                             <img className="intro-image" 
@@ -68,21 +76,23 @@ function Home() {
                 <div className="home-footer">
                     <i class="fas fa-code fa-5x footer-topIcon"></i>
                     {/* <h1 className="footer-topIcon">hello</h1> */}
-                    <h3>Made with <span>❤</span> in India</h3>
+                    <h3>Made with <span>❤</span> in <span style={{color: "#4C97FF"}}>India</span></h3>
                     <p className="footer-description">At early coding, our mission is to teach concepts pf programming to those who have no coding background and help them build awesome apps and games.</p>
                 </div>
             </div>
             <style jsx>{`
-                strong{
+                .heading-gettingStarted{
                     border: 1px solid #000;
+                    color: #000;
                     border-radius: 0.25rem;
                     padding: 1rem;
                     margin-top: 0.5rem;
                 }
 
-                strong:hover{
+                .heading-gettingStarted:hover{
                     border-color: #4C97FF !important;
                     color: #4C97FF !important;
+                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
                 }
 
                 .home-intro{
