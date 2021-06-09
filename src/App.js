@@ -11,12 +11,15 @@ import Snake from "./components/snake_game/components/App";
 import BricksBreaker from "./components/bricks_breaker/components/App";
 import Memory from "./components/memory/components/App";
 import Mole from "./components/whack_a_mole/components/App";
+import HomePage from "./components/home/Home"
+import Activity from "./components/activity/Activity"
 
 function App() {
   return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/activity" component={Activity} />
           <Route path="/scrat" component={Scrat} />
           <Route path="/p5" component={P5}/>
           <Route path="/sketch" component={Sketch}/>
