@@ -1,4 +1,5 @@
 import React from 'react'
+import ankit from "../../images/ankit.jpeg"
 
 function TeamCard(porps) {
     return (
@@ -17,7 +18,7 @@ function TeamCard(porps) {
                     <div class="col-md-4 single-item">
                         <div class="item">
                             <div class="thumb">
-                                <img class="img-fluid" src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="Thumb"/>
+                                <img class="img-fluid" src={ankit} alt="Thumb"/>
                                 <div class="overlay">
                                     <h4>Ankit Anand</h4>
                                     <p>
@@ -133,6 +134,11 @@ function TeamCard(porps) {
                     text-decoration: none;
                     outline: none;
                 }
+
+                .img-fluid{
+                    width: 100%;
+                    height: 399px;
+                }
                 .social ul {
                     margin: 0;
                     padding: 0;
@@ -166,7 +172,7 @@ function TeamCard(porps) {
                 left: 50%;
                 margin-left: -25px;
                 position: absolute;
-                width: 50px;
+                width: 100px;
                 }
 
                 .site-heading h2 span {
@@ -253,11 +259,11 @@ function TeamCard(porps) {
                 opacity: .6;
                 }
 
-                .team-area .item .thumb .social li {
+                .social li {
                 display: inline-block;
                 }
 
-                .team-area .item .thumb .social li a {
+                .social li a {
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
                 border-radius: 50%;
@@ -328,27 +334,27 @@ function TeamCard(porps) {
                 text-transform: uppercase;
                 }
 
-                .team-area .social li.twitter a {
+                .social li.twitter a {
                 background-color: #00b6f1;
                 }
 
-                .team-area .social li.pinterest a {
+                .social li.pinterest a {
                 background-color: #bd081c;
                 }
 
-                .team-area .social li.facebook a {
+                .social li.facebook a {
                 background-color: #3b5998;
                 }
 
-                .team-area .social li.google-plus a {
+                .social li.google-plus a {
                 background-color: #df4a32;
                 }
 
-                .team-area .social li.vimeo a {
+                .social li.vimeo a {
                 background-color: #1ab7ea;
                 }
 
-                .team-area .social li.instagram a {
+                .social li.instagram a {
                 background-color: #cd486b;
                 }
             `}</style>

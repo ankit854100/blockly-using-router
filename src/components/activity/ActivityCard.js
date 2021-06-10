@@ -14,8 +14,9 @@ function ActivityCard(props) {
                 </div>
                 <div className="activityCard-bottom">
                     <h4 className="bottom-title">{props.name}</h4>
-                    <p className="bottom-desc">{props.desc}</p>
-                    <Link to={props.link}>
+                    <p className="bottom-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat purus ut metus convallis cursus. Sed accumsan ac tortor vel commodo. Curabitur tempus tellus ut aliquet placerat. Curabitur est metus, tincidunt ullamcorper est vitae, vulputate faucibus justo. Donec gravida augue quis mi sodales suscipit non quis tellus. </p>
+                    
+                    <Link to={props.link} target="_blank" rel="noopener noreferrer">
                         <span className="bottom-tryButton">try activity</span>
                     </Link>
                     <i class="bottom-playIcon fas fa-play-circle fa-2x"></i>
@@ -23,7 +24,7 @@ function ActivityCard(props) {
             </div>
             <style jsx>{`
                 .activityCard{
-                    border: 1px solid #000;
+                    border: 1px solid #C3CCD9;
                     width: 18rem;
                     border-radius: 0.5rem;
                     margin: 1rem;
@@ -38,7 +39,7 @@ function ActivityCard(props) {
                 }
 
                 .activityCard-bottom{
-                    border-top: 1px solid #000;
+                    border-top: 1px solid #C3CCD9;
                     padding: 1rem;
                     position: relative;
                 }
@@ -56,7 +57,7 @@ function ActivityCard(props) {
                 }
 
                 .bottom-tryButton:hover{
-                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                 }
 
                 .bottom-playIcon{

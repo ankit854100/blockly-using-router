@@ -44,12 +44,15 @@ function NavBar(props) {
                 .home-navbar{
                         background-color: transparent !important;
                         transition:all 0.25s ease-in;
+                        padding-left: 4rem !important;
                         {/* color: #8097A0  */}
                     }
 
                     .active{
+                        transition:all 0.25s ease-in;
+                        padding-left: 3rem !important;
                         background-color: #A3D2CA !important;
-                        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
                     }
 
                     .navbar-navLinks{

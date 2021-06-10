@@ -1,6 +1,7 @@
 import React from 'react'
 import TeamCard from "./TeamCard"
 import NavBar from "./NavBar"
+import Footer from "./Footer"
 import {Link} from "react-router-dom"
 
 function Home() {
@@ -18,10 +19,13 @@ function Home() {
                     </div>
                     <div className="intro-descContainer">
                        <div>
-                            <h3 className="descContainer-heading">A new and easy way to learn coding.</h3>
-                            <Link to="/activity">
+                            <h3 className="descContainer-heading">A new and easy way to learn <span style={{color: "#4C97FF"}}>coding</span></h3>
+                            <Link to="/activity" target="_blank" rel="noopener noreferrer" >
                                 <strong className="heading-gettingStarted">Getting started</strong>
                             </Link>
+                            {/* <Link to="/activity">
+                                <strong className="heading-gettingStarted">Getting started</strong>
+                            </Link> */}
                        </div>
                     </div>
                 </div>
@@ -73,12 +77,7 @@ function Home() {
                 <div className="home-team">
                     <TeamCard />
                 </div>
-                <div className="home-footer">
-                    <i class="fas fa-code fa-5x footer-topIcon"></i>
-                    {/* <h1 className="footer-topIcon">hello</h1> */}
-                    <h3>Made with <span>❤</span> in <span style={{color: "#4C97FF"}}>India</span></h3>
-                    <p className="footer-description">At early coding, our mission is to teach concepts pf programming to those who have no coding background and help them build awesome apps and games.</p>
-                </div>
+                <Footer />
             </div>
             <style jsx>{`
                 .heading-gettingStarted{
@@ -183,30 +182,6 @@ function Home() {
                 .team-cards{
                     display: flex;
                     flex-wrap: wrap;
-                }
-
-                .home-footer{
-                    position: relative;
-                    text-align: center;
-                    padding-top: 4rem;
-                    padding-left: 2rem;
-                    padding-right: 2rem;
-                    padding-bottom: 4rem;
-                    background-color: #a3d2ca;
-                }
-
-                .footer-topIcon{
-                    position: absolute;
-                    top: -2.5rem;
-                    left: 39rem;
-                    right: auto;
-                }
-
-                .footer-description{
-                    font-size: 1.5rem;
-                    max-width: 60rem;
-                    margin-left: auto;
-                    margin-right: auto;
                 }
 
             `}</style>
