@@ -20,7 +20,7 @@ function Home() {
                     <div className="intro-descContainer">
                        <div>
                             <h3 className="descContainer-heading">A new and easy way to learn <span style={{color: "#4C97FF"}}>coding</span></h3>
-                            <Link to="/activity" target="_blank" rel="noopener noreferrer" >
+                            <Link to="/activity">
                                 <strong className="heading-gettingStarted">Getting started</strong>
                             </Link>
                             {/* <Link to="/activity">

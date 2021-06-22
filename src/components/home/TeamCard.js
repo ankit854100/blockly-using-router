@@ -1,5 +1,6 @@
 import React from 'react'
 import ankit from "../../images/ankit.jpeg"
+import amar from "../../images/amar.jpeg"
 
 function TeamCard(porps) {
     return (
@@ -54,7 +55,7 @@ function TeamCard(porps) {
                     <div class="col-md-4 single-item">
                         <div class="item">
                             <div class="thumb">
-                                <img class="img-fluid" src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="Thumb" />
+                                <img class="img-fluid" src={amar} alt="Thumb" />
                                 <div class="overlay">
                                     <h4>Amartya Kashyap</h4>
                                     <p>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {BrowserRouter,Switch, Route, Link} from "react-router-dom";
 import './App.css';
 // import P5js from "./components/p5js_advance/components/App";
@@ -13,22 +13,32 @@ import Memory from "./components/memory/components/App";
 import Mole from "./components/whack_a_mole/components/App";
 import HomePage from "./components/home/Home"
 import Activity from "./components/activity/Activity"
+import Signup from './components/Signup';
+import Login from "./components/Login";
+import ForgotPassword from './components/ForgotPassword';
+import {useAuth} from "./context/AuthContext"
 
 function App() {
+
+  const {currentUser} = useAuth()
+
   return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/activity" component={Activity} />
-          <Route path="/scrat" component={Scrat} />
-          <Route path="/p5" component={P5}/>
-          <Route path="/sketch" component={Sketch}/>
-          <Route path="/dinosaur" component={Dinosaur}/>
-          <Route path="/editor" component={Editor}/>
-          <Route path="/snake" component={Snake}/>
-          <Route path="/bricksbreaker" component={BricksBreaker}/>
-          <Route path="/memory" component={Memory}/>
-          <Route path="/mole" component={Mole}/>
+          {currentUser && <Route path="/scrat" component={Scrat} />}
+          {currentUser && <Route path="/p5" component={P5}/>}
+          {currentUser && <Route path="/sketch" component={Sketch}/>}
+          {currentUser && <Route path="/dinosaur" component={Dinosaur}/>}
+          {currentUser && <Route path="/editor" component={Editor}/>}
+          {currentUser &&<Route path="/snake" component={Snake}/>}
+          {currentUser && <Route path="/bricksbreaker" component={BricksBreaker}/>}
+          {currentUser && <Route path="/memory" component={Memory}/>}
+          {currentUser && <Route path="/mole" component={Mole}/>}
+          <Route path="/signup" component={Signup}/>
+          <Route path="/login" component={Login}/>
+          <Route path="/forgot-password" component={ForgotPassword}/>
           <Route component={PageNotFound} />
         </Switch> 
       </BrowserRouter>
@@ -78,31 +88,3 @@ function Spare(){
 }
 
 export default App;
-
-{/* <nav>
-<ul>
-  <li>
-    <Link to="/">Home</Link>
-  </li>
-  <li>
-    <Link to="/scrat">Scrat</Link>
-  </li>
-  <li>
-    <Link to="/p5_beginner">P5 beginner</Link>
-  </li>
-</ul>
-</nav>
-
-{/* A <Switch> looks through its children <Route>s and
-  renders the first one that matches the current URL. */}
-{/* <Switch>
-<Route path="/scrat">
-  <Scrat />
-</Route>
-<Route path="/p5_beginner">
-  <P5 />
-</Route>
-<Route path="/">
-  <Home />
-</Route>
-</Switch>  */}

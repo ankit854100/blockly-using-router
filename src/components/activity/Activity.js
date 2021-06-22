@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from '../home/Footer'
 import NavBar from "../home/NavBar"
 import ActivityCard from "./ActivityCard"
+import {useAuth} from "../../context/AuthContext"
+import {useHistory} from "react-router-dom"
 
 const links = [{name: "Running Bird", link:"/dinosaur", description : "description"}, {name: "Scrat", link: "/scrat", description: "description"}, {name: "Sketch", link: "/sketch", description: "description"}, {name: "P5", link: "/p5", description: "description"}, {name: "Editor", link: "/editor", description: "description"}]
 const games = [{name: "Snake", link: "/snake", description: "description"}, {name: "Bricks Breaker", link: "/bricksbreaker", description: "description"}, {name: "Memory", link: "/memory", description: "description"}, {name: "Mole", link: "/mole", description: "description"}]
 
 function Activity() {
+    const {currentUser} = useAuth()
+    const history = useHistory()
+
+    useEffect(()=> {
+        if(!currentUser){
+            history.push("/")
+        }
+    },[])
     return (
         <React.Fragment>
             <div className="activity">

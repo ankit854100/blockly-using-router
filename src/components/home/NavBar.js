@@ -1,9 +1,19 @@
 import React, {useState} from 'react'
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
+import {Link} from "react-router-dom"
+import { useAuth } from "../../context/AuthContext"
+import {useHistory} from "react-router-dom"
 
 function NavBar(props) {
     const [navBar, setNavBar] = useState(false);
+    const { currentUser, logout} = useAuth();
+    const history = useHistory()
+
+    const handleLogout = () => {
+        logout();
+        history.push("/")
+    }
 
     const changeBackground = () => {
         // console.log(window.scrollY)
@@ -20,23 +30,53 @@ function NavBar(props) {
         <div>
             {props.version === true ? 
                 <Navbar className={!navBar? "home-navbar": "active"} collapseOnSelect expand="lg" variant="light" fixed="top">
-                        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                        <Navbar.Brand href="#home">Early-coding</Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
-                            <Nav className="ml-auto navbar-navLinks">
-                                <Nav.Link className="navLinks-link" href="#features">create</Nav.Link>
-                                <Nav.Link className="navLinks-link" href="#pricing">sign in</Nav.Link>
+                            {!currentUser ? 
+                                <Nav className="ml-auto navbar-navLinks">
+                                    <Nav.Link className="navLinks-link" href="">
+                                        <Link to="/signup" className={!navBar? "sign-up-button": "sign-up-active"}>new user</Link>
+                                    </Nav.Link>
+                                    <Nav.Link className="navLinks-link" href="">
+                                        <Link to="/login" className={!navBar? "sign-up-button": "sign-up-active"}>login</Link>
+                                    </Nav.Link>
+                                </Nav> :
+                                <Nav className="ml-auto navbar-navLinks">
+                                <Nav.Link className="navLinks-link" href="">
+                                    {currentUser.email.split("@")[0]}
+                                </Nav.Link>
+                                <Nav.Link className="navLinks-link" href="" onClick={logout}>
+                                    logout
+                                </Nav.Link>
                             </Nav>
+
+                            }
                         </Navbar.Collapse>
                 </Navbar>: 
                 <Navbar className="active" collapseOnSelect expand="lg" variant="light" fixed="top">
-                        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                        <Navbar.Brand href="#home">Early-Coding</Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
-                            <Nav className="ml-auto navbar-navLinks">
-                                <Nav.Link className="navLinks-link" href="#features">create</Nav.Link>
-                                <Nav.Link className="navLinks-link" href="#pricing">sign in</Nav.Link>
+                            {!currentUser ? 
+                                <Nav className="ml-auto navbar-navLinks">
+                                    <Nav.Link className="navLinks-link" href="">
+                                        <Link to="/signup" className={!navBar? "sign-up-button": "sign-up-active"}>new user</Link>
+                                    </Nav.Link>
+                                    <Nav.Link className="navLinks-link" href="">
+                                        <Link to="/login" className={!navBar? "sign-up-button": "sign-up-active"}>login</Link>
+                                    </Nav.Link>
+                                </Nav> :
+                                <Nav className="ml-auto navbar-navLinks">
+                                <Nav.Link className="navLinks-link" href="">
+                                    {currentUser.email.split("@")[0]}
+                                </Nav.Link>
+                                <Nav.Link className="navLinks-link" href="" onClick={handleLogout}>
+                                    logout
+                                </Nav.Link>
                             </Nav>
+
+                            }
                         </Navbar.Collapse>
                 </Navbar>
             }
@@ -69,13 +109,29 @@ function NavBar(props) {
                     }
 
                     .home-navbar .navLinks-link:hover{
-                        border: 1px solid #8097A0; 
-                        color: #8097A0 !important
+                        border: 1px solid #4C97FF; 
+                        color: #4C97FF !important
                     }
 
                     .active .navLinks-link:hover{
                         border: 1px solid #fff; 
                         color: #fff !important
+                    }
+
+                    .sign-up-button{
+                        color: #000;
+                    }
+
+                    .sign-up-button:hover{
+                        color: #4C97FF;
+                    }
+
+                    .sign-up-active{
+                        color: #000;
+                    }
+
+                    .sign-up-active:hover{
+                        color: #fff;
                     }
             `}</style>
         </div>
