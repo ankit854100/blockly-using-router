@@ -10,8 +10,7 @@ let blockTypes = [
   "block_type_move_fb",
   "block_type_move_lr",
   "block_type_jump_fb",
-  "block_type_set_color",
-  "block_type_set_color_random"
+  "block_type_set_color"
 ];
 export default function Workspace(props) {
   useEffect(() => {
