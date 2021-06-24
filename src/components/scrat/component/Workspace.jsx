@@ -5,7 +5,7 @@ import "../CustomBlocks";
 import block1, { block2 } from "../BlocksLevels";
 // import * as canvas from "./CanvasAssets";
 import { Button } from "react-bootstrap";
-import { leveltype, south, north, east, west, checkCarrots} from "./CanvasAssets";
+import { leveltype, south, north, east, west, checkCarrots, index, handleIndexChange} from "./CanvasAssets";
 
 // const south = canvas.south;
 // const north = canvas.north;
@@ -73,6 +73,26 @@ export default function Workspace(props) {
     checkCarrots();
   }
 
+  function handlePrevious(){
+    
+    if(index === 0){
+      handleIndexChange(8);
+    }
+    else{
+      handleIndexChange(index - 1);
+    }
+    props.resetGame();
+  }
+
+  function handleNext(){
+    if(index === 8){
+      handleIndexChange(0);
+    }
+    else{
+      handleIndexChange(index + 1);
+    }
+    props.resetGame();
+  }
   
 
   function handleClick() {
@@ -87,13 +107,23 @@ export default function Workspace(props) {
     } catch (e) {
       alert(e);
     }
+    // console.log(code);
   }
 
   return (
     <div className="blocklyInnerWrapper">
       <div className="buttonContainer">
         <Button
-          variant="primary"
+          variant="warning"
+          size="sm"
+          className="custombutton"
+          onClick={handlePrevious}
+        >
+          {" "}
+          previous{" "}
+        </Button>
+        <Button
+          variant="success"
           size="sm"
           className="custombutton"
           onClick={handleClick}
@@ -111,6 +141,15 @@ export default function Workspace(props) {
         >
           {" "}
           restart{" "}
+        </Button>
+        <Button
+          variant="warning"
+          size="sm"
+          className="custombutton"
+          onClick={handleNext}
+        >
+          {" "}
+          next{" "}
         </Button>
       </div>
       <div id="blocklyDiv"></div>

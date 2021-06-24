@@ -91,7 +91,7 @@ function Home() {
                 .heading-gettingStarted:hover{
                     border-color: #4C97FF !important;
                     color: #4C97FF !important;
-                    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24) !important;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; !important;
                 }
 
                 .home-intro{

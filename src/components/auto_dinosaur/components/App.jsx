@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import dimension, {
   component,
   obstacles,
   obstaclesArray,
   spawnObtacles,
-  RandomIntRange
+  RandomIntRange,
+  reset
 } from "./game";
 import Workspace from "./Workspace";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -23,7 +24,9 @@ let background;
 // let scoreValue = 0;
 
 export default function App() {
-  const ref = useRef();
+  const ref = useRef(); 
+  const [workspaceStatus, setWorkspaceStatus] = useState("start");
+  let myReq;
 
   useEffect(() => {
     const canvas = ref.current;
@@ -100,15 +103,23 @@ export default function App() {
 
     gameSpeed += 0.01;
     if (cont) {
-      requestAnimationFrame(update);
+      myReq = requestAnimationFrame(update);
     }
+  }
+
+  function resetWorkspace(){
+    // setWorkspaceStatus("restart");
+    // cancelAnimationFrame(myReq);
+    // ctx.clearRect(0, 0, dimension.w, dimension.h);
+    // reset();
+    window.location.reload();
   }
   return (
     <div className="dino-top-wrapper">
       <div className="dino-instruction-container"></div>
       <div className="dino-blocklyWrapper">
         <div className="dino-blocklyContainer">
-          <Workspace fun={handleClick} />
+          <Workspace fun={handleClick} status={workspaceStatus} restart={resetWorkspace}/>
         </div>
         <div className="dino-rectangle">
           <canvas ref={ref} id="dino-canvas" />

@@ -6,7 +6,7 @@ import {useAuth} from "../../context/AuthContext"
 import {useHistory} from "react-router-dom"
 
 const links = [{name: "Running Bird", link:"/dinosaur", description : "description"}, {name: "Scrat", link: "/scrat", description: "description"}, {name: "Sketch", link: "/sketch", description: "description"}, {name: "P5", link: "/p5", description: "description"}, {name: "Editor", link: "/editor", description: "description"}]
-const games = [{name: "Snake", link: "/snake", description: "description"}, {name: "Bricks Breaker", link: "/bricksbreaker", description: "description"}, {name: "Memory", link: "/memory", description: "description"}, {name: "Mole", link: "/mole", description: "description"}]
+const games = [{name: "Snake", link: "/snake", description: "description"}, {name: "Bricks Breaker", link: "/bricksbreaker", description: "description"}, {name: "Memory", link: "/memory", description: "description"}, {name: "Mole", link: "/mole", description: "description"}, {name: "Flappy Bird", link: "/flappybird", description: "description"}]
 
 function Activity() {
     const {currentUser} = useAuth()
@@ -14,7 +14,7 @@ function Activity() {
 
     useEffect(()=> {
         if(!currentUser){
-            history.push("/")
+            history.push("/signup")
         }
     },[])
     return (

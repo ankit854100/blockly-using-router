@@ -19,7 +19,7 @@ function ActivityCard(props) {
                     <Link to={props.link} target="_blank" rel="noopener noreferrer">
                         <span className="bottom-tryButton">try activity</span>
                     </Link>
-                    <i class="bottom-playIcon fas fa-play-circle fa-2x"></i>
+                    {/* <i class="bottom-playIcon fas fa-play-circle fa-2x"></i> */}
                 </div>
             </div>
             <style jsx>{`

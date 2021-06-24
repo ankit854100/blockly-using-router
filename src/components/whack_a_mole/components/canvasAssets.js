@@ -1,7 +1,7 @@
 import { ctx } from "./App";
 import { newCode } from "./Workspace";
 import mole from "../images/mole.png";
-const dimension = { w: 350, h: 500 };
+const dimension = { w: 350, h: 350 };
 
 let rows = 3;
 let cols = 3;

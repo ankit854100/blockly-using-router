@@ -1,16 +1,22 @@
 import level1, {
+  level2,
   level3,
+  level4,
   level5,
-  level10,
-  level0,
-  level11,
-  level20,
-  level19
+  level6,
+  level7,
+  level8,
+  level9,
+  level10
 } from "../Levels";
 
 const dimension = { w: 320, h: 320 };
 
-let level = JSON.parse(JSON.stringify(level10));
+const levelArray = [level1, level2, level3, level4, level5, level6, level7, level8, level9];
+
+let index = 0;
+
+let level = JSON.parse(JSON.stringify(levelArray[index]));
 
 let coordinates = level.coordinates;
 
@@ -24,8 +30,8 @@ const path = [
   [0, 0, 0, 0, 0, 0, 0]
 ];
 
-let rows = 8;
-let col = 8;
+let rows = 7;
+let col = 7;
 let factor = 40;
 let status = 0;
 
@@ -113,6 +119,8 @@ const sleep = (milliseconds) => {
 
 async function west() {
   await sleep(1000);
+
+  // console.log("function is clicked");
 
   if (status === 0) {
     dx = -factor;
@@ -249,7 +257,7 @@ function checkCarrots() {
 }
 
 function restoreGame(value) {
-  level = JSON.parse(JSON.stringify(level10));
+  level = JSON.parse(JSON.stringify(levelArray[index]));
   coordinates = level.coordinates;
   status = value;
   direction = "left";
@@ -258,6 +266,10 @@ function restoreGame(value) {
   dx = 0;
   dy = 0;
   initializeValues();
+}
+
+function handleIndexChange(value){
+  index = value;
 }
 
 export default dimension;
@@ -276,5 +288,7 @@ export {
   coordinates,
   checkCarrots,
   carrots,
-  leveltype
+  leveltype,
+  index,
+  handleIndexChange
 };

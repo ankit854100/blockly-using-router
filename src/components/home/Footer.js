@@ -25,7 +25,7 @@ function Footer() {
                     </div>
                 </div>
             <style jsx>{`
-                .home-footer{
+            .home-footer{
                     position: relative;
                     text-align: center;
                     padding-top: 4rem;
@@ -34,14 +34,12 @@ function Footer() {
                     padding-bottom: 4rem;
                     background-color: #a3d2ca;
                 }
-
                 .footer-topIcon{
                     position: absolute;
                     top: -2.5rem;
                     left: 39rem;
                     right: auto;
                 }
-
                 .footer-description{
                     font-size: 1.5rem;
                     max-width: 60rem;
@@ -54,11 +52,9 @@ function Footer() {
                     padding: 0;
                     list-style: none;
                 }
-
                 .social li {
                 display: inline-block;
                 }
-
                 .social li a {
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
@@ -71,27 +67,21 @@ function Footer() {
                 text-align: center;
                 width: 40px;
                 }
-
                 .social li.twitter a {
                 background-color: #00b6f1;
                 }
-
                 .social li.pinterest a {
                 background-color: #bd081c;
                 }
-
                 .social li.facebook a {
                 background-color: #3b5998;
                 }
-
                 .social li.google-plus a {
                 background-color: #df4a32;
                 }
-
                 .social li.vimeo a {
                 background-color: #1ab7ea;
                 }
-
                 .social li.instagram a {
                 background-color: #cd486b;
                 }

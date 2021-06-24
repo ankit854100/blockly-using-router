@@ -172,6 +172,14 @@ function RandomIntRange(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
+function reset(){
+  obstaclesArray = [];
+  gameSpeed = 3;
+  isDraw = false;
+  isJump = false;
+  isDuck = false;
+}
+
 export default dimension;
 export {
   setIsDraw,
@@ -181,5 +189,6 @@ export {
   obstacles,
   obstaclesArray,
   spawnObtacles,
-  RandomIntRange
+  RandomIntRange,
+  reset
 };

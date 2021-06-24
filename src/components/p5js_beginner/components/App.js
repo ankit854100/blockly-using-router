@@ -46,7 +46,7 @@ export default function App() {
       </div>
       <style jsx>{`
       .top-wrapper {
-        /* background-color: bisque; */
+        background-color: #fff;
         display: flex;
         flex-direction: row;
         height: 100% !important;

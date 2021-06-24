@@ -1,17 +1,24 @@
-import React, {useRef, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import {Card, Form, Button, Alert} from "react-bootstrap"
 import {Link, useHistory} from "react-router-dom"
 import { useAuth } from '../context/AuthContext'
+import NavBar from "./home/NavBar"
 
 function Signup() {
 
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const { signup} = useAuth()
+    const { signup, currentUser} = useAuth()
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
     const history = useHistory()
+
+    useEffect(() => {
+        if(currentUser){
+            history.push("/")
+        }
+    })
 
     async function handleSubmit(e){
         e.preventDefault()
@@ -34,6 +41,7 @@ function Signup() {
 
     return (
         <div className="signup-top">
+            <NavBar version={true} />
             <div className="signup-wrapper">
                 <Card>
                     <Card.Body>

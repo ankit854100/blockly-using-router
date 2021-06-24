@@ -11,6 +11,7 @@ import Snake from "./components/snake_game/components/App";
 import BricksBreaker from "./components/bricks_breaker/components/App";
 import Memory from "./components/memory/components/App";
 import Mole from "./components/whack_a_mole/components/App";
+import FlappyBird from "./components/flappy_bird/components/App";
 import HomePage from "./components/home/Home"
 import Activity from "./components/activity/Activity"
 import Signup from './components/Signup';
@@ -36,9 +37,10 @@ function App() {
           {currentUser && <Route path="/bricksbreaker" component={BricksBreaker}/>}
           {currentUser && <Route path="/memory" component={Memory}/>}
           {currentUser && <Route path="/mole" component={Mole}/>}
-          <Route path="/signup" component={Signup}/>
-          <Route path="/login" component={Login}/>
-          <Route path="/forgot-password" component={ForgotPassword}/>
+          {currentUser && <Route path="/flappybird" component={FlappyBird}/>}
+          {!currentUser && <Route path="/signup" component={Signup}/>}
+          {!currentUser && <Route path="/login" component={Login}/>}
+          {!currentUser && <Route path="/forgot-password" component={ForgotPassword}/>}
           <Route component={PageNotFound} />
         </Switch> 
       </BrowserRouter>

@@ -1,7 +1,8 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../context/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import NavBar from "./home/NavBar"
 
 export default function Login() {
   const emailRef = useRef()
@@ -10,6 +11,12 @@ export default function Login() {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const history = useHistory()
+
+  useEffect(() => {
+    if(currentUser){
+      history.push("/")
+    }
+  })
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -27,7 +34,8 @@ export default function Login() {
   }
 
   return (
-    <>
+    <div>
+      <NavBar version={true} />
       <div className="login-wrapper">
         <Card>
             <Card.Body>
@@ -61,6 +69,6 @@ export default function Login() {
             padding: 5rem 25rem;
         }
       `}</style>
-    </>
+    </div>
   )
 }

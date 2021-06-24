@@ -18,7 +18,12 @@ export default function Workspace(props) {
     if (props.status === "start") {
       workSpace = Blockly.inject("blocklySketchDiv", {
         toolbox: document.getElementById("toolbox"),
-        scrollbars: false
+        scrollbars: true,
+        move: {
+          drag: true,
+          wheel: true
+        },
+        grid: { spacing: 40, length: 2, colour: "#ccc", snap: true }
       });
 
       Blockly.Xml.domToWorkspace(

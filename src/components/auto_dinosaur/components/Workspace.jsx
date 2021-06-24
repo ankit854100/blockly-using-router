@@ -8,9 +8,25 @@ let workspace = new Blockly.Workspace();
 
 export default function Workspace(props) {
   useEffect(() => {
-    workspace = Blockly.inject("blocklyDinoDiv", {
-      toolbox: document.getElementById("toolbox")
-    });
+    if (props.status === "start") {
+      workspace = Blockly.inject("blocklyDinoDiv", {
+        toolbox: document.getElementById("toolbox"),
+        scrollbars: true,
+        move: {
+          drag: true,
+          wheel: true
+        },
+        grid: { spacing: 40, length: 2, colour: "#ccc", snap: true }
+      });
+
+    }
+
+    if (props.status === "restart") {
+      workspace.clear();
+    }
+    // workspace = Blockly.inject("blocklyDinoDiv", {
+    //   toolbox: document.getElementById("toolbox")
+    // });
   });
 
   function handleClick() {
@@ -47,13 +63,22 @@ export default function Workspace(props) {
       <div className="dino-blocklyInnerWrapper">
         <div className="dino-buttonContainer">
           <Button
-            variant="primary"
+            variant="success"
             size="sm"
             className="custombutton"
             onClick={handleClick}
           >
             {" "}
-            run{" "}
+            run code{" "}
+          </Button>
+          <Button
+            variant="danger"
+            size="sm"
+            className="custombutton"
+            onClick={props.restart}
+          >
+            {" "}
+            restart{" "}
           </Button>
         </div>
         <div id="blocklyDinoDiv"></div>

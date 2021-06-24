@@ -15,6 +15,10 @@ function NavBar(props) {
         history.push("/")
     }
 
+    const handleLogoClick = () => {
+        history.push("/")
+    }
+
     const changeBackground = () => {
         // console.log(window.scrollY)
         if (window.scrollY >= 20) {
@@ -30,7 +34,7 @@ function NavBar(props) {
         <div>
             {props.version === true ? 
                 <Navbar className={!navBar? "home-navbar": "active"} collapseOnSelect expand="lg" variant="light" fixed="top">
-                        <Navbar.Brand href="#home">Early-coding</Navbar.Brand>
+                        <Navbar.Brand href="" className="brand-logo" onClick={handleLogoClick}>Early-Coding</Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             {!currentUser ? 
@@ -55,7 +59,7 @@ function NavBar(props) {
                         </Navbar.Collapse>
                 </Navbar>: 
                 <Navbar className="active" collapseOnSelect expand="lg" variant="light" fixed="top">
-                        <Navbar.Brand href="#home">Early-Coding</Navbar.Brand>
+                        <Navbar.Brand href="" className="brand-logo" onClick={handleLogoClick}>Early-Coding</Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             {!currentUser ? 
@@ -81,13 +85,12 @@ function NavBar(props) {
                 </Navbar>
             }
             <style jsx>{`
-                .home-navbar{
+            .home-navbar{
                         background-color: transparent !important;
                         transition:all 0.25s ease-in;
                         padding-left: 4rem !important;
                         {/* color: #8097A0  */}
                     }
-
                     .active{
                         transition:all 0.25s ease-in;
                         padding-left: 3rem !important;
@@ -95,10 +98,19 @@ function NavBar(props) {
                         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
                     }
 
+                    .home-navbar .brand-logo:hover{
+                        color: #4C97FF !important;
+                        cursor: pointer;
+                    }
+
+                    .active .brand-logo:hover{
+                        color: #fff !important;
+                        cursor: pointer;
+                    }
+
                     .navbar-navLinks{
                         padding: 0.5rem;
                     }
-
                     .navLinks-link{
                         margin-right: 1rem;
                         color: #000 !important;
@@ -107,29 +119,23 @@ function NavBar(props) {
                         padding-right: 1rem !important;
                         padding-left: 1rem !important;
                     }
-
                     .home-navbar .navLinks-link:hover{
                         border: 1px solid #4C97FF; 
                         color: #4C97FF !important
                     }
-
                     .active .navLinks-link:hover{
                         border: 1px solid #fff; 
                         color: #fff !important
                     }
-
                     .sign-up-button{
                         color: #000;
                     }
-
                     .sign-up-button:hover{
                         color: #4C97FF;
                     }
-
                     .sign-up-active{
                         color: #000;
                     }
-
                     .sign-up-active:hover{
                         color: #fff;
                     }
