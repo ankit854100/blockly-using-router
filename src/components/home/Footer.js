@@ -6,7 +6,7 @@ function Footer() {
             <div className="home-footer">
                     <i class="fas fa-code fa-5x footer-topIcon"></i>
                     <h3>Made with <span>❤</span> in <span style={{color: "#4C97FF"}}>India</span></h3>
-                    <p className="footer-description">At early coding, our mission is to teach concepts pf programming to those who have no coding background and help them build awesome apps and games.</p>
+                    <p className="footer-description">At early coding, our mission is to teach concepts of programming to those who have no coding background and help them build awesome apps and games.</p>
                     <div class="social">
                         <ul>
                             <li class="twitter">
