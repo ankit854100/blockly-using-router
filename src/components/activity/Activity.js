@@ -11,10 +11,10 @@ const links = [{name: "Running Bird", link:"/dinosaur", description : "This less
                  {name: "P5", link: "/p5", description: "This lesson will help you polish your skills of conditionals and iterators. This lesson will let you use the programming concepts at higher level of abstraction."}, 
                  {name: "Editor", link: "/editor", description: "This is drag and drop environement editor with all the concepts of functional programming with the help of this editor you are going to learn a lot of programming concepts with the real syntax like blocks."}]
 
-const games = [{name: "Snake", link: "/snake", description: "This activity is popular sanke game which you play on your mobile phones. You are going to make a full functional snake game with your prior knowledge of conditionals, iterators and variables."}, 
+const games = [{name: "Snake", link: "/snake", description: "This activity is popular snake game which you play on your mobile phones. You are going to make a full functional snake game with your prior knowledge of conditionals, iterators and variables."}, 
                 {name: "Bricks Breaker", link: "/bricksbreaker", description: "This activity is popular bricks breaker game which you play on your mobile phones. You are going to make a full functional bricks breaker game with your prior knowledge of conditionals, iterators and variables."}, 
-                {name: "Memory", link: "/memory", description: "This activity is popular memory game which you play on your mobile phones. You are going to make a full functional memory game with your prior knowledge of conditionals, iterators and variables."}, 
-                {name: "Mole", link: "/mole", description: "This activity is popular whack a mole which you play on your mobile phones. You are going to make a full functional whack a mole game with your prior knowledge of conditionals, iterators and variables."}, 
+                {name: "Memory Game", link: "/memory", description: "This activity is popular memory game which you play on your mobile phones. You are going to make a full functional memory game with your prior knowledge of conditionals, iterators and variables."}, 
+                {name: "Whack a mole", link: "/mole", description: "This activity is popular whack a mole which you play on your mobile phones. You are going to make a full functional whack a mole game with your prior knowledge of conditionals, iterators and variables."}, 
                 {name: "Flappy Bird", link: "/flappybird", description: "This activity is popular flappy bird game which you play on your mobile phones. You are going to make a full functional flappy bird game with your prior knowledge of conditionals, iterators and variables."}
             ]
 

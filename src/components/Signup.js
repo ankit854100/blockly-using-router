@@ -54,11 +54,11 @@ function Signup() {
                             </Form.Group>
                             <Form.Group id="password">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" ref={passwordRef} required />
+                            <Form.Control type="password" ref={passwordRef} required placeholder="In alpha-numeric format"/>
                             </Form.Group>
                             <Form.Group id="password-confirm">
                             <Form.Label>Password Confirmation</Form.Label>
-                            <Form.Control type="password" ref={passwordConfirmRef} required />
+                            <Form.Control type="password" ref={passwordConfirmRef} required placeholder="In alpha-numeric format"/>
                             </Form.Group>
                             <Button disabled={loading} className="w-100" type="submit">
                             Sign Up

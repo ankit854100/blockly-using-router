@@ -67,8 +67,8 @@ function Home() {
                             <ul className="points-container">
                                 <li>Logic building</li>
                                 <li>Programming with worrying about syntax.</li>
-                                <li>Will learn all the procedural programming concepts.</li>
-                                <li>Will learn all the procedural programming concepts.</li>
+                                <li>Will learn concepts like iterators and conditionals.</li>
+                                <li>Will learn all basic programming concepts with fun of visual demonstration.</li>
                                 <li>Will learn all the procedural programming concepts.</li>
                             </ul>
                         </div>

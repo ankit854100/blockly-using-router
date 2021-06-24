@@ -1,6 +1,7 @@
 import React from 'react'
 import ankit from "../../images/ankit.jpeg"
 import amar from "../../images/amar.jpeg"
+import mohinder from "../../images/mohinder.jpeg"
 
 function TeamCard(porps) {
     return (
@@ -27,17 +28,17 @@ function TeamCard(porps) {
                                     </p>
                                     <div class="social">
                                         <ul>
-                                            <li class="twitter">
+                                            {/* <li class="twitter">
                                                 <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
-                                            </li>
+                                            </li> */}
                                             {/* <li class="pinterest">
                                                 <a href="#"><i class="fab fa-pinterest"></i></a>
                                             </li> */}
-                                            <li class="instagram">
+                                            {/* <li class="instagram">
                                                 <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                                            </li>
+                                            </li> */}
                                             <li class="vimeo">
-                                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="https://www.linkedin.com/in/ankit-anand-087254177/"><i class="fab fa-linkedin-in"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -45,7 +46,7 @@ function TeamCard(porps) {
                             </div>
                             <div class="info">
                                 <span class="message">
-                                    <a href="#"><i class="fas fa-envelope-open"></i></a>
+                                    <a href="mailto:ankit854100@email.com"><i class="fas fa-envelope-open"></i></a>
                                 </span>
                                 <h4>Ankit Anand</h4>
                                 <span>Software Developer</span>
@@ -63,17 +64,17 @@ function TeamCard(porps) {
                                     </p>
                                     <div class="social">
                                         <ul>
-                                            <li class="twitter">
+                                            {/* <li class="twitter">
                                                 <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
-                                            </li>
+                                            </li> */}
                                             {/* <li class="pinterest">
                                                 <a href="#"><i class="fab fa-pinterest"></i></a>
                                             </li> */}
-                                            <li class="instagram">
+                                            {/* <li class="instagram">
                                                 <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                                            </li>
+                                            </li> */}
                                             <li class="vimeo">
-                                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="https://www.linkedin.com/in/amartya-kashyap-2262881b2/"><i class="fab fa-linkedin-in"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -81,7 +82,7 @@ function TeamCard(porps) {
                             </div>
                             <div class="info">
                                 <span class="message">
-                                    <a href="#"><i class="fas fa-envelope-open"></i></a>
+                                    <a href="mailto:amartya1998kashyap@email.com"><i class="fas fa-envelope-open"></i></a>
                                 </span>
                                 <h4>Amartya Kashyap</h4>
                                 <span>App Developer</span>
@@ -91,7 +92,10 @@ function TeamCard(porps) {
                     <div class="col-md-4 single-item">
                         <div class="item">
                             <div class="thumb">
-                                <img class="img-fluid" src="https://i.ibb.co/JC4skS0/team-animate.jpg" alt="Thumb"/>
+                                <img class="img-fluid" 
+                                    src={mohinder}
+                                    // src="https://i.ibb.co/JC4skS0/team-animate.jpg" 
+                                    alt="Thumb"/>
                                 <div class="overlay">
                                     <h4>Mohinder Sharma</h4>
                                     <p>
@@ -99,17 +103,17 @@ function TeamCard(porps) {
                                     </p>
                                     <div class="social">
                                         <ul>
-                                            <li class="twitter">
+                                            {/* <li class="twitter">
                                                 <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
-                                            </li>
+                                            </li> */}
                                             {/* <li class="pinterest">
                                                 <a href="#"><i class="fab fa-pinterest"></i></a>
                                             </li> */}
-                                            <li class="instagram">
+                                            {/* <li class="instagram">
                                                 <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                                            </li>
+                                            </li> */}
                                             <li class="vimeo">
-                                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="https://www.linkedin.com/in/mscodi/"><i class="fab fa-linkedin-in"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -117,7 +121,7 @@ function TeamCard(porps) {
                             </div>
                             <div class="info">
                                 <span class="message">
-                                    <a href="#"><i class="fas fa-envelope-open"></i></a>
+                                    <a href="mailto:mohindersharma075@gmail.com"><i class="fas fa-envelope-open"></i></a>
                                 </span>
                                 <h4>Mohinder Sharma</h4>
                                 <span>Web designer</span>
