@@ -10,16 +10,16 @@ function Footer() {
                     <div class="social">
                         <ul>
                             <li class="twitter">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
                             </li>
                             <li class="pinterest">
-                                <a href="#"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
                             </li>
                             <li class="instagram">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                             </li>
                             <li class="vimeo">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
                             </li>
                         </ul>
                     </div>

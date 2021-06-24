@@ -28,16 +28,16 @@ function TeamCard(porps) {
                                     <div class="social">
                                         <ul>
                                             <li class="twitter">
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
                                             </li>
-                                            <li class="pinterest">
+                                            {/* <li class="pinterest">
                                                 <a href="#"><i class="fab fa-pinterest"></i></a>
-                                            </li>
+                                            </li> */}
                                             <li class="instagram">
-                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                                             </li>
                                             <li class="vimeo">
-                                                <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -59,21 +59,21 @@ function TeamCard(porps) {
                                 <div class="overlay">
                                     <h4>Amartya Kashyap</h4>
                                     <p>
-                                        Computer science engineer and softaware developer.
+                                        Computer science engineer and app developer.
                                     </p>
                                     <div class="social">
                                         <ul>
                                             <li class="twitter">
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
                                             </li>
-                                            <li class="pinterest">
+                                            {/* <li class="pinterest">
                                                 <a href="#"><i class="fab fa-pinterest"></i></a>
-                                            </li>
+                                            </li> */}
                                             <li class="instagram">
-                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                                             </li>
                                             <li class="vimeo">
-                                                <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -95,21 +95,21 @@ function TeamCard(porps) {
                                 <div class="overlay">
                                     <h4>Mohinder Sharma</h4>
                                     <p>
-                                        Computer science engineer and softaware developer.
+                                        Computer science engineer and web designer.
                                     </p>
                                     <div class="social">
                                         <ul>
                                             <li class="twitter">
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
                                             </li>
-                                            <li class="pinterest">
+                                            {/* <li class="pinterest">
                                                 <a href="#"><i class="fab fa-pinterest"></i></a>
-                                            </li>
+                                            </li> */}
                                             <li class="instagram">
-                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
                                             </li>
                                             <li class="vimeo">
-                                                <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
                                             </li>
                                         </ul>
                                     </div>

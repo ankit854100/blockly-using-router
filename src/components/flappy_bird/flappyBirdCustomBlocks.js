@@ -1,7 +1,7 @@
 import * as Blockly from "blockly/core";
 import "blockly/javascript";
 
-Blockly.Blocks["when_run"] = {
+Blockly.Blocks["when_flappy_run"] = {
   init: function () {
     this.appendDummyInput().appendField("start game");
     this.appendStatementInput("NAME").setCheck(null);
@@ -11,7 +11,7 @@ Blockly.Blocks["when_run"] = {
   }
 };
 
-Blockly.JavaScript["when_run"] = function (block) {
+Blockly.JavaScript["when_flappy_run"] = function (block) {
   var statements_name = Blockly.JavaScript.statementToCode(block, "NAME");
   // TODO: Assemble JavaScript into code variable.
   var code = `${statements_name} \nif(gameEnd) gameOver();\nif (!gameEnd) myReq = requestAnimationFrame(draw);`;

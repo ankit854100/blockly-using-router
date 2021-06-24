@@ -57,7 +57,7 @@ Blockly.JavaScript["block_type_bg"] = function (block) {
   return code;
 };
 
-Blockly.Blocks["block_type_timeout"] = {
+Blockly.Blocks["bricks_block_type_timeout"] = {
   init: function () {
     this.appendDummyInput().appendField("while lives is not zero");
     this.appendStatementInput("NAME").setCheck(null);
@@ -69,7 +69,7 @@ Blockly.Blocks["block_type_timeout"] = {
   }
 };
 
-Blockly.JavaScript["block_type_timeout"] = function (block) {
+Blockly.JavaScript["bricks_block_type_timeout"] = function (block) {
   var statements_name = Blockly.JavaScript.statementToCode(block, "NAME");
   // TODO: Assemble JavaScript into code variable.
   var code = `clearCanvas();\n${statements_name}\nmyReq = requestAnimationFrame(draw); `;

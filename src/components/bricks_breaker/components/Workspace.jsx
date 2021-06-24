@@ -45,7 +45,7 @@ export default function Workspace(props) {
   }
 
   function reset() {
-    workspace.clear();
+    // workspace.clear();
     newCode = "";
     canvas.clearCanvas();
     canvas.reset();
@@ -58,11 +58,11 @@ export default function Workspace(props) {
   return (
     <div className="BlocklyInnerContainer">
       <div className="buttonContainer">
-        <Button size="sm" className="customButton" onClick={runCode}>
+        <Button variant="success" size="sm" className="customButton" onClick={runCode}>
           {" "}
           run code{" "}
         </Button>
-        <Button size="sm" className="customButton" onClick={reset}>
+        <Button variant="danger" size="sm" className="customButton" onClick={reset}>
           {" "}
           reset{" "}
         </Button>
@@ -85,7 +85,7 @@ export default function Workspace(props) {
         </category>
         <category name="Bricks Breaker" colour="#4C97FF">
           <block type="block_type_bg"></block>
-          <block type="block_type_timeout"></block>
+          <block type="bricks_block_type_timeout"></block>
           <block type="block_type_bricks"></block>
           <block type="block_type_paddle"></block>
           <block type="block_type_ball"></block>

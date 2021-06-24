@@ -14,21 +14,26 @@ function ActivityCard(props) {
                 </div>
                 <div className="activityCard-bottom">
                     <h4 className="bottom-title">{props.name}</h4>
-                    <p className="bottom-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat purus ut metus convallis cursus. Sed accumsan ac tortor vel commodo. Curabitur tempus tellus ut aliquet placerat. Curabitur est metus, tincidunt ullamcorper est vitae, vulputate faucibus justo. Donec gravida augue quis mi sodales suscipit non quis tellus. </p>
+                    <p className="bottom-desc">{props.desc}</p>
                     
-                    <Link to={props.link} target="_blank" rel="noopener noreferrer">
+                    {/* <Link to={props.link} target="_blank" rel="noopener noreferrer">
                         <span className="bottom-tryButton">try activity</span>
-                    </Link>
+                    </Link> */}
                     {/* <i class="bottom-playIcon fas fa-play-circle fa-2x"></i> */}
                 </div>
+                <Link to={props.link} target="_blank" className="button-wrapper" rel="noopener noreferrer">
+                    <span className="bottom-tryButton">try activity</span>
+                </Link>
             </div>
             <style jsx>{`
                 .activityCard{
+                    position:relative;
                     border: 1px solid #C3CCD9;
                     width: 18rem;
                     border-radius: 0.5rem;
                     margin: 1rem;
                     margin-left: 0;
+                    min-height: 400px;
                 }
 
                 .activityCard-img{
@@ -36,6 +41,12 @@ function ActivityCard(props) {
                     height: 8rem;
                     border-top-left-radius: 0.5rem;
                     border-top-right-radius: 0.5rem;
+                }
+
+                .button-wrapper{
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 1rem;
                 }
 
                 .activityCard-bottom{

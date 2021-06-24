@@ -57,7 +57,7 @@ export default function Workspace(props) {
     <div className="BlocklyInnerContainer">
       <div className="buttonContainer">
         <Button
-          variant="dark"
+          variant="success"
           size="sm"
           className="customButton"
           onClick={runCode}
@@ -66,7 +66,7 @@ export default function Workspace(props) {
           run code{" "}
         </Button>
         <Button
-          variant="dark"
+          variant="danger"
           size="sm"
           className="customButton"
           onClick={reset}
@@ -98,7 +98,7 @@ export default function Workspace(props) {
         </category>
         <category name="snake" colour="#4C97FF">
           <block type="block_type_bg"></block>
-          <block type="block_type_timeout"></block>
+          <block type="block_type_snake_timeout"></block>
           <block type="block_type_draw_snake"></block>
           <block type="block_type_move_snake"></block>
           <block type="block_type_draw_food"></block>

@@ -38,7 +38,7 @@ Blockly.JavaScript["block_type_set_game"] = function (block) {
   return code;
 };
 
-Blockly.Blocks["block_type_timeout"] = {
+Blockly.Blocks["block_type_snake_timeout"] = {
   init: function () {
     this.appendDummyInput().appendField("while snake is not dead");
     this.appendStatementInput("TIMEOUT").setCheck(null);
@@ -50,7 +50,7 @@ Blockly.Blocks["block_type_timeout"] = {
   }
 };
 
-Blockly.JavaScript["block_type_timeout"] = function (block) {
+Blockly.JavaScript["block_type_snake_timeout"] = function (block) {
   // var number_refresh_rate = block.getFieldValue("refresh_rate");
   var statements_timeout = Blockly.JavaScript.statementToCode(block, "TIMEOUT");
   // TODO: Assemble JavaScript into code variable.

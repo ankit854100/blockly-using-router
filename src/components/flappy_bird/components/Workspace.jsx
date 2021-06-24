@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import * as Blockly from "blockly";
-import "../customBlocks";
+import "../flappyBirdCustomBlocks";
 import draw, { resetGame } from "./canvasAssets";
 
 let workspace = new Blockly.Workspace();
@@ -59,11 +59,11 @@ export default function Workspace(props) {
   return (
     <div className="BlocklyInnerContainer">
       <div className="buttonContainer">
-        <Button size="sm" className="customButton" onClick={runCode}>
+        <Button variant="success" size="sm" className="customButton" onClick={runCode}>
           {" "}
           run code{" "}
         </Button>
-        <Button size="sm" className="customButton" onClick={reset}>
+        <Button variant="danger" size="sm" className="customButton" onClick={reset}>
           {" "}
           reset{" "}
         </Button>
@@ -74,7 +74,7 @@ export default function Workspace(props) {
         id="startingBlock"
         style={{ display: "none" }}
       >
-        <block type="when_run" deletable="false" movable="false" />
+        <block type="when_flappy_run" deletable="false" movable="false" />
       </xml>
       <xml
         xmlns="https://developers.google.com/blockly/xml"

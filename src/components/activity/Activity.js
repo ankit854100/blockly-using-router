@@ -5,8 +5,18 @@ import ActivityCard from "./ActivityCard"
 import {useAuth} from "../../context/AuthContext"
 import {useHistory} from "react-router-dom"
 
-const links = [{name: "Running Bird", link:"/dinosaur", description : "description"}, {name: "Scrat", link: "/scrat", description: "description"}, {name: "Sketch", link: "/sketch", description: "description"}, {name: "P5", link: "/p5", description: "description"}, {name: "Editor", link: "/editor", description: "description"}]
-const games = [{name: "Snake", link: "/snake", description: "description"}, {name: "Bricks Breaker", link: "/bricksbreaker", description: "description"}, {name: "Memory", link: "/memory", description: "description"}, {name: "Mole", link: "/mole", description: "description"}, {name: "Flappy Bird", link: "/flappybird", description: "description"}]
+const links = [{name: "Running Bird", link:"/dinosaur", description : "This lesson is going to teach you what loop and conditionals are and their importance."},
+                 {name: "Squirrel", link: "/scrat", description: "This is lesson will help you practice your knowledge of loop and conditionals by giving you task with progressive levels."}, 
+                 {name: "Sketch", link: "/sketch", description: "This lesson is a fun activity which you help you refresh your mood and let you draw different shapes."}, 
+                 {name: "P5", link: "/p5", description: "This lesson will help you polish your skills of conditionals and iterators. This lesson will let you use the programming concepts at higher level of abstraction."}, 
+                 {name: "Editor", link: "/editor", description: "This is drag and drop environement editor with all the concepts of functional programming with the help of this editor you are going to learn a lot of programming concepts with the real syntax like blocks."}]
+
+const games = [{name: "Snake", link: "/snake", description: "This activity is popular sanke game which you play on your mobile phones. You are going to make a full functional snake game with your prior knowledge of conditionals, iterators and variables."}, 
+                {name: "Bricks Breaker", link: "/bricksbreaker", description: "This activity is popular bricks breaker game which you play on your mobile phones. You are going to make a full functional bricks breaker game with your prior knowledge of conditionals, iterators and variables."}, 
+                {name: "Memory", link: "/memory", description: "This activity is popular memory game which you play on your mobile phones. You are going to make a full functional memory game with your prior knowledge of conditionals, iterators and variables."}, 
+                {name: "Mole", link: "/mole", description: "This activity is popular whack a mole which you play on your mobile phones. You are going to make a full functional whack a mole game with your prior knowledge of conditionals, iterators and variables."}, 
+                {name: "Flappy Bird", link: "/flappybird", description: "This activity is popular flappy bird game which you play on your mobile phones. You are going to make a full functional flappy bird game with your prior knowledge of conditionals, iterators and variables."}
+            ]
 
 function Activity() {
     const {currentUser} = useAuth()

@@ -65,7 +65,7 @@ export default function Workspace(props) {
       <div className="blocklyInnerContainer">
         <div className="buttonContainer">
           <Button
-            variant="dark"
+            variant="success"
             size="sm"
             className="customButton"
             onClick={runCode}
@@ -74,7 +74,7 @@ export default function Workspace(props) {
             run code{" "}
           </Button>
           <Button
-            variant="dark"
+            variant="danger"
             size="sm"
             className="customButton"
             onClick={reset}

@@ -66,7 +66,7 @@ export default function Workspace() {
       <div className="inner-wrapper">
         <div className="button-container">
           <Button
-            variant="dark"
+            variant="success"
             size="sm"
             className="custombutton"
             onClick={handleClick}
@@ -76,7 +76,7 @@ export default function Workspace() {
           </Button>
           <Button
             size="sm"
-            variant="dark"
+            variant="danger"
             className="custombutton"
             onClick={handleReset}
           >
@@ -85,7 +85,7 @@ export default function Workspace() {
           </Button>
           <Button
             size="sm"
-            variant="dark"
+            variant="primary"
             className="custombutton"
             onClick={showCode}
           >
